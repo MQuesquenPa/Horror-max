@@ -5,7 +5,7 @@ import { AllCards } from './components/Blog_Articles/AllCards';
 function App() {
   return (
     <>
-      <h1>HORROR HISTORY</h1>
+      <h1 style={{fontFamily: 'Nigthscary'}}>HORROR HISTORY</h1>
       {/* <AllButtons /> */}
       <AllCards />
     </>

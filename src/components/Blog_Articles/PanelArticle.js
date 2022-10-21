@@ -13,19 +13,9 @@ const {ButtonPrimary} =  Buttons
 const useStyles = makeStyles({
   roots: {
     minWidth: 275,
-    // background: 'red',
-    maxHeight:750
-  },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
-  },
-  title: {
-    fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
+    background: 'blue',
+    alignContent: 'center',
+    
   },
   boton:{
     background: 'green',
@@ -39,13 +29,14 @@ const useStyles = makeStyles({
   contents:{
     display: 'flex',
     flexDirection: 'row',
-    
   },
   contents2:{
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    height: '100%'
+    height: '100%',
+    fontFamily: 'Roboto',
+    background: 'red'
   },
   boton2:{
     alignItems: 'center',
@@ -62,6 +53,9 @@ const useStyles = makeStyles({
     textAlign: 'center',
     width: '35%'
   },
+  cuadroizq:{
+    background: 'blue'
+  }
 });
 
 
@@ -93,21 +87,51 @@ const PanelArticleSeccundary = (props) => {
     
   return (
       <>
-        <div style={{padding: '5%', maxWidth: '650px'}}>
+      <div style={{padding: '1%', maxWidth: '550px'}}>
+        <Card>
+            <div style={{background:'purple', display: 'flex', flexDirection:'row'}}>
+              <CardContent style={{ padding:'0%', marginLeft:'-180px'}}>
+                <div style={{background:'blue'}}>
+                  <h6>Lorem ssaduhfo osudhoaf afouhfoas osahfo soaifhsao asfouihaf nasfofh afohasuif saoffhaso afoihaopif obfabfoisa buofasbf asoFbh</h6>
+                </div>
+              </CardContent>
+              <CardContent>
+                <div style={{background:'red', maxWidth:'400px', maxHeight:'400px'}}>
+                  <div className={classes.contents2}>
+                    <div className={classes.boton2}>
+                      <h6>GAMING</h6>
+                    </div>
+                  </div>
+                  <h4 style={{ textAlign: 'justify' }}>Everything you ever need to know about Birds of Prey Movie Harley Quinn</h4>
+
+                {/* <p>SUB-TITULO</p> */}
+                <h5>Duis porta, ligula rhoncus euismod pretium, nisi tellus eleifend odio, luctus viverra sem dolo id sem, maecenas a venenatis enim quis portitor magna. eliam nec rhoncus neque. Sed quis ultices eros.
+curabitur</h5>
+                <div style={{display: 'flex',  flexDirection: 'row'}}>
+                    <Avatar style={{ width: 24, height: 24 }} alt="Remy Sharp" src="https://img.lovepik.com/element/45006/1283.png_860.png" />
+                    <p style={{height: 24, marginBlock: 'auto', marginLeft: '10px'}}>props.nameUser</p>
+                </div>
+                </div>
+              </CardContent>
+            </div>
+        </Card>
+      </div>
+        {/* <div style={{padding: '5%', maxWidth: '650px', display:'flex', flexDirection:'row'}}>
           
           <Card className={classes.roots}>
           <div className={classes.contents}>
             <CardContent>
-              <h6>Lorem ssaduhfo osudhoaf afouhfoas osahfo soaifhsao asfouihaf nasfofh afohasuif saoffhaso afoihaopif obfabfoisa buofasbf asoFbh</h6>
-            </CardContent>
-
+              {/* <h6>Lorem ssaduhfo osudhoaf afouhfoas osahfo soaifhsao asfouihaf nasfofh afohasuif saoffhaso afoihaopif obfabfoisa buofasbf asoFbh</h6> */}
+          {/*  </CardContent>
+          </div>
+          <div className={classes.contents}>
             <CardContent>
               <div className={classes.contents2}>
                 <div className={classes.boton2}>
                     <h6>GAMING</h6>
                 </div>
                 {/* <p style={{ textAlign: 'justify' }}>{props.title}</p> */}
-                <p style={{ textAlign: 'justify' }}>este es un titulo largo para al tarjeta Lorem ssaduhfo osudhoaf afouhfoas osahfo soaifhsao asfouihaf nasfofh afohasuif saoffhaso afoihaopif obfabfoisa buofasbf asoFbh</p>
+             {/*   <p style={{ textAlign: 'justify' }}>este es un titulo largo para al tarjeta Lorem ssaduhfo osudhoaf afouhfoas osahfo soaifhsao asfouihaf nasfofh afohasuif saoffhaso afoihaopif obfabfoisa buofasbf asoFbh</p>
 
                 <p>SUB-TITULO</p>
                 <div style={{display: 'flex',  flexDirection: 'row'}}>
@@ -119,7 +143,7 @@ const PanelArticleSeccundary = (props) => {
           </div>
         </Card>
 
-        </div>
+        </div> */}
       </>
     )
 }
