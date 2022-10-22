@@ -22,10 +22,8 @@ const ButtonSecondary = (props) => {
 
 const ButtonIcon = (props) => {
   const classes = styleButton();
-  
   return(
-    <Button variant="contained" className={classes.buttonPrimary} endIcon= {props.Icon}
-    >
+    <Button variant="contained" className={classes.buttonPrimary} endIcon= {props.Icon}>
       {props.title}
     </Button>
   )
@@ -36,6 +34,15 @@ const ButtonCirclePrimary = (props) =>{
   return(
     <Button variant="contained" className={classes.ButtonIcon}>
     {props.Icon}
+    </Button>
+  )
+}
+
+const ButtonSimple = (props) =>{
+  const classes = styleButton();
+  return(
+    <Button variant="contained" className={classes.ButtonIcon} style={props.color}>
+    {props.title}
     </Button>
   )
 }
@@ -53,5 +60,6 @@ export default {
   ButtonSecondary,
   ButtonIcon,
   ButtonCirclePrimary,
+  ButtonSimple
   // ButtonCircleSeccondary,
 } 

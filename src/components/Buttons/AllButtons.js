@@ -2,8 +2,7 @@ import React from 'react'
 import Buttons from './ButtonSimple';
 import DeleteIcon from '@material-ui/icons/Delete';
 
-const {ButtonIcon, ButtonPrimary, ButtonSecondary, ButtonCirclePrimary, ButtonCircleSeccondary} =  Buttons
-
+const {ButtonIcon, ButtonPrimary, ButtonSecondary, ButtonCirclePrimary, ButtonCircleSeccondary, ButtonSimple} =  Buttons
 
 
 export const AllButtons = () => {
@@ -17,8 +16,8 @@ export const AllButtons = () => {
         <br /><br />
         <ButtonCirclePrimary  Icon={<DeleteIcon />} />
         <br /><br />
-        {/* <ButtonCircleSeccondary Icon={<DeleteIcon />} />
-        <br /><br /> */}
+        <ButtonSimple title={"HOLA"}/>
+        <br /><br />
     </>
     // <div>AllButtons</div>
   )

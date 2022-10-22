@@ -6,14 +6,17 @@ import Avatar from '@material-ui/core/Avatar';
 import Buttons from '../Buttons/ButtonSimple';
 import Colors from '../Colors';
 import { makeStyles } from '@material-ui/core';
+import styleCard from './styles';
 
 const {greenPrimary, greenSecondary} = Colors
 const {ButtonPrimary} =  Buttons
 
+const {} = styleCard
+
 const useStyles = makeStyles({
   roots: {
     minWidth: 275,
-    background: 'blue',
+    background: 'grey',
     alignContent: 'center',
     
   },
@@ -42,7 +45,7 @@ const useStyles = makeStyles({
     alignItems: 'center',
     alignSelf: 'flex-start',
     borderRadius: '28px',
-    background: 'green',
+    background: '#3bb21e',
     color: '#fff',
     cursor: 'pointer',
     display: 'flex',
@@ -60,39 +63,45 @@ const useStyles = makeStyles({
 
 
 const PanelArticlePrimary = (props) => {
-  const classes = useStyles();
-  
+  const {roots, buttonCardPrinc, titleCardPrinc, nameUserPrinc} = styleCard();
   return (
     <>
-    <Card className={classes.roots}>
-        <CardContent>
-            
-            <div className={classes.boton}>
-                <p >GAMING</p>
+    <div style={{padding: '1%', maxWidth: '320px'}}>
+      <Card className={roots}>
+          <CardContent >
+            <div style={{marginBottom: '120px'}}>
+              <div className={buttonCardPrinc}>
+                <p>GAMING</p>
+              </div>
+              <h4 className={titleCardPrinc}>{props.title}</h4>
             </div>
-            <p style={{ textAlign: 'justify' }}>{props.title}</p>
-            {/* <p>Go and check out the new update for Assasin's Creed</p> */}
-            <div style={{display: 'flex',  flexDirection: 'row'}}>
-                <Avatar style={{ width: 24, height: 24 }} alt="Remy Sharp" src="https://img.lovepik.com/element/45006/1283.png_860.png" />
-                <p style={{height: 24, marginBlock: 'auto', marginLeft: '10px'}}>{props.nameUser}</p>
+            <div>
+              <div style={{display: 'flex',  flexDirection: 'row'}}>
+                  <Avatar style={{ width: 24, height: 24 }} alt={props.nameUser} src={props.avatar} />                           
+                  <p className={nameUserPrinc}>{props.nameUser}</p>
+              </div>
             </div>
-        </CardContent>
-    </Card>
+          </CardContent>
+      </Card>
+    </div>
     </>
   )
 }
 
 const PanelArticleSeccundary = (props) => {
-  const classes = useStyles();
-    
+  const {roots, buttonCardPrinc, titleCardPrinc, nameUserPrinc, divAvatar} = styleCard();
+    const classes = useStyles();
   return (
-      <>
-      <div style={{padding: '1%', maxWidth: '550px'}}>
+    <>
+      <div style={{padding: '1%', maxWidth: '550px', gridTemplateColumns: '50% auto'}}>
         <Card>
-            <div style={{background:'purple', display: 'flex', flexDirection:'row'}}>
-              <CardContent style={{ padding:'0%', marginLeft:'-180px'}}>
+            <div style={{background:'#191919', display: 'flex', flexDirection:'row'}}>
+              {/* <CardContent style={{ padding:'0%', marginLeft:'-180px'}}> */}
+              <CardContent style={{ padding:'0%'}}>
+
                 <div style={{background:'blue'}}>
-                  <h6>Lorem ssaduhfo osudhoaf afouhfoas osahfo soaifhsao asfouihaf nasfofh afohasuif saoffhaso afoihaopif obfabfoisa buofasbf asoFbh</h6>
+                  {/* <h6>Lorem ssaduhfo osudhoaf afouhfoas osahfo soaifhsao asfouihaf nasfofh afohasuif saoffhaso afoihaopif obfabfoisa buofasbf asoFbh</h6> */}
+                  <img style={{display: 'block',  width: '100%', height:'100%', marginLeft: 'auto', marginRight: 'auto'}} src="https://img.lovepik.com/element/45006/1283.png_860.png" />
                 </div>
               </CardContent>
               <CardContent>
@@ -102,55 +111,44 @@ const PanelArticleSeccundary = (props) => {
                       <h6>GAMING</h6>
                     </div>
                   </div>
-                  <h4 style={{ textAlign: 'justify' }}>Everything you ever need to know about Birds of Prey Movie Harley Quinn</h4>
-
-                {/* <p>SUB-TITULO</p> */}
-                <h5>Duis porta, ligula rhoncus euismod pretium, nisi tellus eleifend odio, luctus viverra sem dolo id sem, maecenas a venenatis enim quis portitor magna. eliam nec rhoncus neque. Sed quis ultices eros.
-curabitur</h5>
+                  <h4 style={{ textAlign: 'justify' }}>{props.title}</h4>
+                  <h5>{props.subtitulo}</h5>
                 <div style={{display: 'flex',  flexDirection: 'row'}}>
                     <Avatar style={{ width: 24, height: 24 }} alt="Remy Sharp" src="https://img.lovepik.com/element/45006/1283.png_860.png" />
-                    <p style={{height: 24, marginBlock: 'auto', marginLeft: '10px'}}>props.nameUser</p>
+                    <p className={divAvatar}>{props.nameUser}</p>
                 </div>
                 </div>
               </CardContent>
             </div>
         </Card>
       </div>
-        {/* <div style={{padding: '5%', maxWidth: '650px', display:'flex', flexDirection:'row'}}>
-          
-          <Card className={classes.roots}>
-          <div className={classes.contents}>
-            <CardContent>
-              {/* <h6>Lorem ssaduhfo osudhoaf afouhfoas osahfo soaifhsao asfouihaf nasfofh afohasuif saoffhaso afoihaopif obfabfoisa buofasbf asoFbh</h6> */}
-          {/*  </CardContent>
-          </div>
-          <div className={classes.contents}>
-            <CardContent>
-              <div className={classes.contents2}>
-                <div className={classes.boton2}>
-                    <h6>GAMING</h6>
-                </div>
-                {/* <p style={{ textAlign: 'justify' }}>{props.title}</p> */}
-             {/*   <p style={{ textAlign: 'justify' }}>este es un titulo largo para al tarjeta Lorem ssaduhfo osudhoaf afouhfoas osahfo soaifhsao asfouihaf nasfofh afohasuif saoffhaso afoihaopif obfabfoisa buofasbf asoFbh</p>
-
-                <p>SUB-TITULO</p>
-                <div style={{display: 'flex',  flexDirection: 'row'}}>
-                    <Avatar style={{ width: 24, height: 24 }} alt="Remy Sharp" src="https://img.lovepik.com/element/45006/1283.png_860.png" />
-                    <p style={{height: 24, marginBlock: 'auto', marginLeft: '10px'}}>props.nameUser</p>
-                </div>
-              </div>
-            </CardContent>
-          </div>
-        </Card>
-
-        </div> */}
       </>
     )
 }
 
 const PanelArticleThird = (props) => {
-    return (
-      <div>PanelArticle 3</div>
+  const classes = useStyles();
+  const {roots, buttonCardPrinc, titleCardPrinc, nameUserPrinc, divAvatar} = styleCard();
+    
+  return (
+      <>
+      <div style={{padding: '1%', maxWidth: '350px'}}>
+        <Card>
+            <div style={{background: 'red'}}>
+              <img style={{margin: 'auto', display:'block'}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGnXgpptQjk0aPjk4ZaYbQhedjrXr_OoPkWg&usqp=CAU"/>
+
+            </div>
+            <div>
+              <button>s</button>
+              <h4>gaiphfjiaspfi</h4>
+              <div style={{display: 'flex',  flexDirection: 'row'}}>
+                    <Avatar style={{ width: 24, height: 24 }} alt="Remy Sharp" src="https://img.lovepik.com/element/45006/1283.png_860.png" />
+                    <p className={divAvatar}>props.nameUser</p>
+              </div>
+            </div>
+        </Card>
+      </div>
+      </>
     )
 }
 

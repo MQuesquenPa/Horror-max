@@ -12,9 +12,22 @@ const styleButton = makeStyles((theme) => ({
   },
   ButtonIcon:{
     borderRadius: '100%',  padding:'6px 0px', minWidth:'35px',color:withePrimary ,background: redPrimary, "&:hover": {background: redSecondary}
+  },
+  ButtonSimple:{
+    alignItems: 'center',
+    alignSelf: 'flex-start',
+    borderRadius: '28px',
+    background: '#4bd129',
+    color: '#fff',
+    cursor: 'pointer',
+    display: 'flex',
+    height: '20px',
+    justifyContent: 'center',
+    minHeight: '28px',
+    padding: '1px', 
+    textAlign: 'center',
+    width: '35%'    
   }
 }));
-
-
 
 export default styleButton

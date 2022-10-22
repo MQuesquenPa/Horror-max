@@ -1,6 +1,6 @@
 import React from 'react'
 import { AllCards } from './components/Blog_Articles/AllCards';
-// import { AllButtons } from './components/Buttons/AllButtons';
+import { AllButtons } from './components/Buttons/AllButtons';
 
 function App() {
   return (
