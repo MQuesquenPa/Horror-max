@@ -12,8 +12,8 @@ export const AllCards = () => {
   return (
     <>
         <PanelArticlePrimary title={texto} nameUser={nameUser} avatar={avatar}/>
-        {/* <PanelArticleSeccundary title={titulo}  subtitulo={subTitulo} nameUser={nameUser}/> */}
-        <PanelArticleThird />
+        <PanelArticleSeccundary title={titulo}  subtitulo={subTitulo} nameUser={nameUser}/>
+        <PanelArticleThird title={texto} nameUser={nameUser} avatar={avatar}/>
     </>
   )
 }

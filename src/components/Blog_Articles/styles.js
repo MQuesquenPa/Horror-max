@@ -37,6 +37,14 @@ const styleCard = makeStyles((theme) => ({
     },
     divAvatar:{
         height: 24, marginBlock: 'auto', marginLeft: '10px'
+    },
+    textTruncate:{
+        textAlign: 'justify', fontWeight: 'normal', color: '#fff', 
+        display: '-webkit-box', WebkitBoxOrient:'vertical', WebkitLineClamp: '2', overflow: 'hidden' 
+    },
+    imageCard:{
+        width: '100%', height: 'auto' , marginBottom:'20px', maxWidth: '350px', 
+        backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition:'center'
     }
 }));
 
