@@ -14,16 +14,16 @@ const Footer = () => {
                 <p style={{marginRight: '30px', fontSize: '15px'}}>SUPORT</p>
             </div>
         </div>
-        <div style={{background: 'red'}}>{/*AQUI VA LA SEGUNDA PARTE*/}
-            <div>{/*AQUI VA LETRAS*/}
-                <p>Terms of Use</p>
-                <p>Privacy Policy</p>
-                <p>Cookies Policy</p>
-                <p>|</p>
-                <p>Do not sell my information</p>
+        <div style={{background: 'red', padding: '0%', marginLeft: '20px'}}>{/*AQUI VA LA SEGUNDA PARTE*/}
+            <div style={{display: 'flex', flexDirection: 'row'}}>{/*AQUI VA LETRAS*/}
+                <p style={{marginRight: '30px', fontSize: '13px'}} >Terms of Use</p>
+                <p style={{marginRight: '30px', fontSize: '13px'}} >Privacy Policy</p>
+                <p style={{marginRight: '30px', fontSize: '13px'}} >Cookies Policy</p>
+                <p style={{marginRight: '30px', fontSize: '13px'}} >|</p>
+                <p style={{marginRight: '30px', fontSize: '13px'}} >Do not sell my information</p>
             </div>
             <div>{/*AQUI VA ICONOS REDES SOCIALES*/}
-
+                <img style={{maxWidth: '220px', maxHeight:'26px'}} src='https://www.nicepng.com/png/full/321-3211139_facebook-logo-icons-facebook-round-png.png' alt='logo-Fb'/>
             </div>
         </div>  
     </div>
